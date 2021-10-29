@@ -9,6 +9,31 @@
     <title>Golf Card</title>
 </head>
 <body>
+
+
+
+    <div class="courseSelector">
+      <select name="courses" id="courseSelect">
+        <option value="Selection">--Select A Course--</option>
+        <option value="Thanksgiving Point">Thanksgiving Point</option>
+        <option value="Fox Hollow">Fox Hollow</option>
+        <option value="Spanish Oaks">Spanish Oaks</option>
+      </select>
+      <select name="players" id="playerCount">
+        <option value="Selection">--Select How Many Players--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <div id="playerNames">
+
+      </div>
+      <input type="button" id="start" value="confirm">
+    </div>
+
+
+
     <div class='container'>
     <table class="table">
         <thead>
@@ -68,20 +93,24 @@
           </tr>
           <tr>
             <th scope="row" class='border'>Name</th>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'><input type="number"></td>
-            <td class='border'></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><input type="number" class="pointField" value="0"></td>
+            <td class='border'><p id="totalPoints"></p></td>
           </tr>
         </tbody>
       </table>
       </div>
+
+
+
+
     <script src=js/app.js></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

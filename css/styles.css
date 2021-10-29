@@ -1,11 +1,28 @@
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 input {
   width: 50%;
+}
+
+.courseSelector {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  align-items: center;
+}
+.courseSelector input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.courseSelector select {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
