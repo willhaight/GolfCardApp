@@ -1,11 +1,26 @@
 //API stuff
+let courseNum;
+let courseData;
+let course;
+let yardage;
+let par;
+let handicap;
+let apiData;
 let site = "https://golf-courses-api.herokuapp.com/courses";
+let courseSite;
+//api call
 async function call(){
 let response = await fetch(site);
-let apiData = await response.json();
-console.log(apiData);
+apiData = await response.json();
+course = apiData['courses'][courseNum];
+apiFill();
 }
 
+async function apiFill(){
+    courseSite = site + "/" + course.id;
+    let response = await fetch(courseSite);
+    courseData = await response.json();
+}
 
 //interaction
 let totalField0 = document.getElementById('totalPoints');
@@ -18,11 +33,12 @@ let pointFields2 = document.getElementsByClassName("pointField2");
 let pointFields3 = document.getElementsByClassName("pointField3");
 let nameField = document.getElementById('playerNames');
 let cardBody = document.getElementById('playerCard');
+let courseGrab = document.getElementById('courseSelect');
+let teeGrab = document.getElementById('tees');
 
 
 //score updating function
 function refreshScore0(){
-    console.log("running0");
    let pointTotal = 0;
     for(let i = 0; i < pointFields0.length; i++){
         if(pointFields0[i].value == ""){
@@ -34,7 +50,6 @@ function refreshScore0(){
 }
 
 function refreshScore1(){
-    console.log("running1");
    let pointTotal = 0;
     for(let i = 0; i < pointFields1.length; i++){
         if(pointFields1[i].value == ""){
@@ -46,7 +61,6 @@ function refreshScore1(){
 }
 
 function refreshScore2(){
-    console.log("running2");
    let pointTotal = 0;
     for(let i = 0; i < pointFields2.length; i++){
         if(pointFields2[i].value == ""){
@@ -58,7 +72,6 @@ function refreshScore2(){
 }
 
 function refreshScore3(){
-    console.log("running3");
    let pointTotal = 0;
     for(let i = 0; i < pointFields3.length; i++){
         if(pointFields3[i].value == ""){
@@ -71,10 +84,20 @@ function refreshScore3(){
 
 
 
-//event listener to update score and starting data
+//event listener to update score and starting data with a dropdown menu for players
 document.getElementById('playerCount').addEventListener('input', dropNames);
 document.getElementById('start').onclick = function(){
+    if(teeGrab.value == 'Selection'){
+        alert("All Information Must Be Filled Out")
+    }
+    else if(courseGrab.value == 'Selection'){
+        alert("All Information Must Be Filled Out")
+    }
+    else if(document.getElementById('playerCount').value == 'Selection'){
+        alert("All Information Must Be Filled Out")
+    }else{
     submitNames();
+}
 }
 
 
@@ -104,23 +127,43 @@ function dropNames(){
 
 }
 
-
+//creation from the inputs into the actual card
 let golferArr = [];
 
 function checkNames(){
     let dupes = 0;
+    if(teeGrab.value == 'Selection'){
+        dupes++;
+    }
+    if(courseGrab.value == 'Selection'){
+        dupes++;
+    }
+    if(document.getElementById('playerCount').value == 'Selection'){
+        dupes++;
+    }
     for(let i = 0; i < golferArr.length; i++){
         for(let j = (i + 1); j < golferArr.length; j++){
           if(golferArr[i] == golferArr[j]){
               dupes++;
-              alert('Duplicate names');
+              alert('All information must be filled out and there can be no duplicate names');
               golferArr = [];
           }
         }
     }
     if(dupes == 0){
+        if(courseGrab.value == 'Thanksgiving Point'){
+            courseNum = 1;
+        }
+        if(courseGrab.value == 'Fox Hollow'){
+            courseNum = 0;
+        }
+        if(courseGrab.value == 'Spanish Oaks'){
+            courseNum = 2;
+        }
+        call();
         playerCount(golferArr.length);
-        document.getElementsByClassName('courseSelector')[0].outerHTML = null;
+        document.getElementsByClassName('courseSelector')[0].outerHTML = "<h1>" + courseGrab.value + "</h1>" + 
+        "<h2>Tee Type: " + teeGrab.value + "</h2>";
     }
 }
 
@@ -142,6 +185,14 @@ function submitNames(){
     }
     if(document.getElementById('playerCount').value == 1){
         golferArr.push(document.getElementById('golferNameBox0').value);
+    }
+    for(let i = 0; i < document.getElementById('playerCount').value; i++){
+        console.log(i);
+        if(golferArr[i] == ''){
+            golferArr = [];
+            alert("Cannot Submit An Empty Name");
+            throw "empty name";
+        }
     }
     checkNames();
 }
