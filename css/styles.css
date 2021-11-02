@@ -6,10 +6,11 @@ body {
 }
 
 input {
-  width: 50%;
+  width: 25%;
 }
 
 .courseSelector {
+  width: 300px;
   margin-top: 15px;
   margin-bottom: 15px;
   display: flex;

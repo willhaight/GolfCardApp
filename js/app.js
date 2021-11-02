@@ -72,45 +72,93 @@ function refreshScore3(){
 
 
 //event listener to update score and starting data
-document.getElementById('playerCount').addEventListener('input', submitNames);
+document.getElementById('playerCount').addEventListener('input', dropNames);
+document.getElementById('start').onclick = function(){
+    submitNames();
+}
 
-function submitNames(){
-    console.log(document.getElementById('playerCount').value);
+
+function dropNames(){
     if(document.getElementById('playerCount').value == 4){
-        nameField.innerHTML = "<input type='text' placeholder='name'>" + "<input type='text' placeholder='name'>" +
- "<input type='text' placeholder='name'>" +
-"<input type='text' placeholder='name'>";
-playerCount(4)
+        nameField.innerHTML = "<input type='text' placeholder='name' id='golferNameBox3'>" + "<input type='text' placeholder='name' id='golferNameBox2'>" +
+ "<input type='text' placeholder='name' id='golferNameBox1'>" +
+"<input type='text' placeholder='name' id='golferNameBox0'>";
+
     }
     if(document.getElementById('playerCount').value == 3){
-        nameField.innerHTML = "<input type='text' placeholder='name'>" + 
-        "<input type='text' vplaceholder'name'>" + "<input type='text' placeholder='name'>";
-        playerCount(3)
+        nameField.innerHTML = "<input type='text' placeholder='name' style='width:33%' id='golferNameBox2'>" + 
+        "<input type='text' placeholder='name' style='width:33%' id='golferNameBox1'>" + "<input type='text' placeholder='name' style='width:33%' id='golferNameBox0'>";
+        
     }
     if(document.getElementById('playerCount').value == 2){
-        nameField.innerHTML = "<input type='text' placeholder='name'>" +
-"<input type='text' placeholder='name'>";
-playerCount(2)
+        nameField.innerHTML = "<input type='text' placeholder='name' style='width:50%' id='golferNameBox1'>" +
+"<input type='text' placeholder='name' style='width:50%' id='golferNameBox0'>";
+
     }
     if(document.getElementById('playerCount').value == 1){
-        nameField.innerHTML = "<input type='text' placeholder='name'>";
-        playerCount(1)
+        nameField.innerHTML = "<input type='text' placeholder='name' style='width:100%' id='golferNameBox0'>";
+  
     }
+
+   
+
+}
+
+
+let golferArr = [];
+
+function checkNames(){
+    let dupes = 0;
+    for(let i = 0; i < golferArr.length; i++){
+        for(let j = (i + 1); j < golferArr.length; j++){
+          if(golferArr[i] == golferArr[j]){
+              dupes++;
+              alert('Duplicate names');
+              golferArr = [];
+          }
+        }
+    }
+    if(dupes == 0){
+        playerCount(golferArr.length);
+        document.getElementsByClassName('courseSelector')[0].outerHTML = null;
+    }
+}
+
+function submitNames(){
+    if(document.getElementById('playerCount').value == 4){
+        golferArr.push(document.getElementById('golferNameBox3').value);
+        golferArr.push(document.getElementById('golferNameBox2').value);
+        golferArr.push(document.getElementById('golferNameBox1').value);
+        golferArr.push(document.getElementById('golferNameBox0').value);
+    }
+    if(document.getElementById('playerCount').value == 3){
+        golferArr.push(document.getElementById('golferNameBox2').value);
+        golferArr.push(document.getElementById('golferNameBox1').value);
+        golferArr.push(document.getElementById('golferNameBox0').value);
+    }
+    if(document.getElementById('playerCount').value == 2){
+        golferArr.push(document.getElementById('golferNameBox1').value);
+        golferArr.push(document.getElementById('golferNameBox0').value);
+    }
+    if(document.getElementById('playerCount').value == 1){
+        golferArr.push(document.getElementById('golferNameBox0').value);
+    }
+    checkNames();
 }
 //adding players onto the card
 function playerCount(loop){
     for(let i = 0; i < loop; i++){
         cardBody.innerHTML += `<tr>
-<th scope="row" class='border'>Name</th>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
-<td class='border'><input type="number" class="pointField`+ i +`" value="0"></td>
+<th scope="row" class='border' id='golferName` + i + `'>`+ golferArr[i]+`</th>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
 <td class='border'><p id="totalPoints`+ i + `"></p></td>
 </tr>`;
     }
