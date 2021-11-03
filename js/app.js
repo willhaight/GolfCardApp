@@ -39,7 +39,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+"</td>" +
-      "</tr>" + "<tr>" +
+      "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
       "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][0]["par"] +"</td>" +
@@ -81,7 +81,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+"</td>" +
-      "</tr>" + "<tr>" +
+      "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
       "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][1]["par"] +"</td>" +
@@ -123,7 +123,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+"</td>" +
-      "</tr>" + "<tr>" +
+      "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
       "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][2]["par"] +"</td>" +
@@ -165,7 +165,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+"</td>" +
-      "</tr>" + "<tr>" +
+      "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
       "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][3]["par"] +"</td>" +
@@ -388,7 +388,8 @@ function submitNames(){
 //adding players onto the card
 function playerCount(loop){
     for(let i = 0; i < loop; i++){
-        cardBody.innerHTML += `<tr>
+        if(i == 0 || i == 2){
+            cardBody.innerHTML += `<tr class='drkRow'>
 <th scope="row" class='border' id='golferName` + i + `'>`+ golferArr[i]+`</th>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
@@ -402,6 +403,23 @@ function playerCount(loop){
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
 <td class='border'><p id="totalPoints`+ i + `"></p></td>
 </tr>`;
+        }
+        if(i == 1 || i == 3){
+            cardBody.innerHTML += `<tr>
+<th scope="row" class='border' id='golferName` + i + `'>`+ golferArr[i]+`</th>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
+<td class='border'><p id="totalPoints`+ i + `"></p></td>
+</tr>`;
+        }
     }
     totalField0 = document.getElementById('totalPoints0');
     pointFields0 = document.getElementsByClassName("pointField0");

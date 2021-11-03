@@ -26,4 +26,13 @@ input {
   margin-top: 15px;
 }
 
+#holeNum {
+  background-color: #760b0b;
+  color: white;
+}
+
+.drkRow {
+  background-color: #d5d5d5;
+}
+
 /*# sourceMappingURL=styles.css.map */
