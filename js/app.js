@@ -3,6 +3,7 @@ let courseNum;
 let courseData;
 let course;
 let yardage;
+let tee;
 let par;
 let handicap;
 let apiData;
@@ -20,6 +21,179 @@ async function apiFill(){
     courseSite = site + "/" + course.id;
     let response = await fetch(courseSite);
     courseData = await response.json();
+    tableBuild();
+}
+
+function tableBuild(){
+    if(tee == 0){
+        cardBody.innerHTML += "<tr>" +
+        "<th scope='row' class='border'>Yardage</th>" +
+        "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'>"+"</td>" +
+      "</tr>" + "<tr>" +
+      "<th scope='row' class='border'>Par</th>" +
+      "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'>"+"</td>" +
+    "</tr>" + "<tr>" +
+    "<th scope='row' class='border'>Handicap</th>" +
+    "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'>"+"</td>" +
+  "</tr>"
+    }
+    if(tee == 1){
+        cardBody.innerHTML += "<tr>" +
+        "<th scope='row' class='border'>Yardage</th>" +
+        "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'>"+"</td>" +
+      "</tr>" + "<tr>" +
+      "<th scope='row' class='border'>Par</th>" +
+      "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'>"+"</td>" +
+    "</tr>" + "<tr>" +
+    "<th scope='row' class='border'>Handicap</th>" +
+    "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'>"+"</td>" +
+  "</tr>"
+    }
+    if(tee == 2){
+        cardBody.innerHTML += "<tr>" +
+        "<th scope='row' class='border'>Yardage</th>" +
+        "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'>"+"</td>" +
+      "</tr>" + "<tr>" +
+      "<th scope='row' class='border'>Par</th>" +
+      "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'>"+"</td>" +
+    "</tr>" + "<tr>" +
+    "<th scope='row' class='border'>Handicap</th>" +
+    "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'>"+"</td>" +
+  "</tr>"
+    }
+    if(tee == 3){
+        cardBody.innerHTML += "<tr>" +
+        "<th scope='row' class='border'>Yardage</th>" +
+        "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'>"+"</td>" +
+      "</tr>" + "<tr>" +
+      "<th scope='row' class='border'>Par</th>" +
+      "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'>"+"</td>" +
+    "</tr>" + "<tr>" +
+    "<th scope='row' class='border'>Handicap</th>" +
+    "<td class='border'>"+ courseData['data']['holes'][0]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][1]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][2]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][3]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][4]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][5]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'>"+"</td>" +
+  "</tr>"
+    }
+    playerCount(golferArr.length);
 }
 
 //interaction
@@ -160,8 +334,23 @@ function checkNames(){
         if(courseGrab.value == 'Spanish Oaks'){
             courseNum = 2;
         }
+        if(teeGrab.value == 'Champion'){
+            tee = 1;
+            console.log(tee);
+        }
+        if(teeGrab.value == 'Men'){
+            tee = 2;
+            console.log(tee);
+        }
+        if(teeGrab.value == 'Women'){
+            tee = 3;
+            console.log(tee);
+        }
+        if(teeGrab.value == 'Pro'){
+            tee = 0;
+            console.log(tee);
+        }
         call();
-        playerCount(golferArr.length);
         document.getElementsByClassName('courseSelector')[0].outerHTML = "<h1>" + courseGrab.value + "</h1>" + 
         "<h2>Tee Type: " + teeGrab.value + "</h2>";
     }
@@ -201,6 +390,7 @@ function playerCount(loop){
     for(let i = 0; i < loop; i++){
         cardBody.innerHTML += `<tr>
 <th scope="row" class='border' id='golferName` + i + `'>`+ golferArr[i]+`</th>
+<td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:100%" value="0"></td>
