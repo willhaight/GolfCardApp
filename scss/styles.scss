@@ -3,12 +3,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 1.5vw;
 }
 input {
-    width:25%;
+    width:100%;
 }
+.table{width:80%}
 .courseSelector{
-    width:300px;
+    width:35%;
     margin-top:15px;
     margin-bottom:15px;
 display:flex;
@@ -18,6 +20,7 @@ align-items: center;
 input{
     margin-top:15px;
     margin-bottom:15px;
+    width:25%;
 }
 select{
     margin-top:15px;
@@ -30,3 +33,14 @@ select{
 .drkRow{
     background-color: rgb(213, 213, 213);
 }
+@media only screen and (max-width: 1100px) {
+    body {
+      font-size:1.2vw;
+      tr{width:30%;}
+      .border{
+          input{
+              width:200%;
+          }
+      }
+    }
+  }
