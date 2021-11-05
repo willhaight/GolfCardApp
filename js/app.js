@@ -37,6 +37,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][0]["yards"] +"</td>" +
@@ -46,6 +47,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][0]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][0]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+"</td>" +
       "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
@@ -58,6 +60,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][0]["par"] +"</td>" +
@@ -67,6 +70,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][0]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][0]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+"</td>" +
     "</tr>" + "<tr>" +
     "<th scope='row' class='border'>Handicap</th>" +
@@ -79,6 +83,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][0]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][0]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][0]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][0]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][0]["hcp"] +"</td>" +
@@ -88,6 +93,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][0]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][0]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][0]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+"</td>" +
   "</tr>"
     }
@@ -103,6 +109,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][1]["yards"] +"</td>" +
@@ -112,6 +119,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][1]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][1]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+"</td>" +
       "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
@@ -124,6 +132,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][1]["par"] +"</td>" +
@@ -133,6 +142,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][1]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][1]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+"</td>" +
     "</tr>" + "<tr>" +
     "<th scope='row' class='border'>Handicap</th>" +
@@ -145,6 +155,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][1]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][1]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][1]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][1]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][1]["hcp"] +"</td>" +
@@ -154,6 +165,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][1]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][1]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][1]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+"</td>" +
   "</tr>"
     }
@@ -169,6 +181,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][2]["yards"] +"</td>" +
@@ -178,6 +191,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][2]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][2]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+"</td>" +
       "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
@@ -190,6 +204,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][2]["par"] +"</td>" +
@@ -199,6 +214,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][2]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][2]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+"</td>" +
     "</tr>" + "<tr>" +
     "<th scope='row' class='border'>Handicap</th>" +
@@ -211,6 +227,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][2]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][2]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][2]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][2]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][2]["hcp"] +"</td>" +
@@ -220,6 +237,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][2]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][2]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][2]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+"</td>" +
   "</tr>"
     }
@@ -235,6 +253,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][3]["yards"] +"</td>" +
@@ -244,6 +263,7 @@ function tableBuild(){
         "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][3]["yards"] +"</td>" +
         "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][3]["yards"] +"</td>" +
+        "<td class='border'></td>" +
         "<td class='border'>"+"</td>" +
       "</tr>" + "<tr class='drkRow'>" +
       "<th scope='row' class='border'>Par</th>" +
@@ -256,6 +276,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][3]["par"] +"</td>" +
@@ -265,6 +286,7 @@ function tableBuild(){
       "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][3]["par"] +"</td>" +
       "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][3]["par"] +"</td>" +
+      "<td class='border'></td>" +
       "<td class='border'>"+"</td>" +
     "</tr>" + "<tr>" +
     "<th scope='row' class='border'>Handicap</th>" +
@@ -277,6 +299,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][6]['teeBoxes'][3]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][7]['teeBoxes'][3]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][8]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+ courseData['data']['holes'][9]['teeBoxes'][3]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][10]['teeBoxes'][3]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][11]['teeBoxes'][3]["hcp"] +"</td>" +
@@ -286,6 +309,7 @@ function tableBuild(){
     "<td class='border'>"+ courseData['data']['holes'][15]['teeBoxes'][3]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][16]['teeBoxes'][3]["hcp"] +"</td>" +
     "<td class='border'>"+ courseData['data']['holes'][17]['teeBoxes'][3]["hcp"] +"</td>" +
+    "<td class='border'></td>" +
     "<td class='border'>"+"</td>" +
   "</tr>"
     }
@@ -310,46 +334,86 @@ let teeGrab = document.getElementById('tees');
 //score updating function
 function refreshScore0(){
    let pointTotal = 0;
+   let halfPoint1 = 0;
+   let halfPoint2 = 0;
     for(let i = 0; i < pointFields0.length; i++){
         if(pointFields0[i].value == ""){
             pointFields0[i].value = 0;
         }
         pointTotal += parseInt(pointFields0[i].value);
+        if(i < 9){
+            halfPoint1 += parseInt(pointFields0[i].value);
+        }
+        if(i >= 9){
+            halfPoint2 += parseInt(pointFields0[i].value);
+        }
     }
     totalField0.innerHTML = "<p>" + pointTotal + "</p>";
+    document.getElementById('halfPoints10').innerHTML = "<p>" + halfPoint1 + "</p>";
+    document.getElementById('halfPoints20').innerHTML = "<p>" + halfPoint2 + "</p>";
 }
 
 function refreshScore1(){
    let pointTotal = 0;
+   let halfPoint1 = 0;
+   let halfPoint2 = 0;
     for(let i = 0; i < pointFields1.length; i++){
         if(pointFields1[i].value == ""){
             pointFields1[i].value = 0;
         }
         pointTotal += parseInt(pointFields1[i].value);
+        if(i < 9){
+            halfPoint1 += parseInt(pointFields1[i].value);
+        }
+        if(i >= 9){
+            halfPoint2 += parseInt(pointFields1[i].value);
+        }
     }
     totalField1.innerHTML = "<p>" + pointTotal + "</p>";
+    document.getElementById('halfPoints11').innerHTML = "<p>" + halfPoint1 + "</p>";
+    document.getElementById('halfPoints21').innerHTML = "<p>" + halfPoint2 + "</p>";
 }
 
 function refreshScore2(){
    let pointTotal = 0;
+   let halfPoint1 = 0;
+   let halfPoint2 = 0;
     for(let i = 0; i < pointFields2.length; i++){
         if(pointFields2[i].value == ""){
             pointFields2[i].value = 0;
         }
         pointTotal += parseInt(pointFields2[i].value);
+        if(i < 9){
+            halfPoint1 += parseInt(pointFields2[i].value);
+        }
+        if(i >= 9){
+            halfPoint2 += parseInt(pointFields2[i].value);
+        }
     }
     totalField2.innerHTML = "<p>" + pointTotal + "</p>";
+    document.getElementById('halfPoints12').innerHTML = "<p>" + halfPoint1 + "</p>";
+    document.getElementById('halfPoints22').innerHTML = "<p>" + halfPoint2 + "</p>";
 }
 
 function refreshScore3(){
    let pointTotal = 0;
+   let halfPoint1 = 0;
+   let halfPoint2 = 0;
     for(let i = 0; i < pointFields3.length; i++){
         if(pointFields3[i].value == ""){
             pointFields3[i].value = 0;
         }
         pointTotal += parseInt(pointFields3[i].value);
+        if(i < 9){
+            halfPoint1 += parseInt(pointFields3[i].value);
+        }
+        if(i >= 9){
+            halfPoint2 += parseInt(pointFields3[i].value);
+        }
     }
     totalField3.innerHTML = "<p>" + pointTotal + "</p>";
+    document.getElementById('halfPoints13').innerHTML = "<p>" + halfPoint1 + "</p>";
+    document.getElementById('halfPoints23').innerHTML = "<p>" + halfPoint2 + "</p>";
 }
 
 
@@ -496,6 +560,7 @@ function playerCount(loop){
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
+<td class='border'><p id="halfPoints1`+ i + `"></p></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
@@ -505,6 +570,7 @@ function playerCount(loop){
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
+<td class='border'><p id="halfPoints2`+ i + `"></p></td>
 <td class='border'><p id="totalPoints`+ i + `"></p></td>
 </tr>`;
         }
@@ -520,6 +586,7 @@ function playerCount(loop){
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
+<td class='border'><p id="halfPoints1`+ i + `"></p></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
@@ -529,6 +596,7 @@ function playerCount(loop){
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
 <td class='border'><input type="number" class="pointField`+ i +`" style="width:120%" value="0"></td>
+<td class='border'><p id="halfPoints2`+ i + `"></p></td>
 <td class='border'><p id="totalPoints`+ i + `"></p></td>
 </tr>`;
         }
